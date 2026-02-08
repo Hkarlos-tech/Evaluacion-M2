@@ -41,3 +41,43 @@ $(document).ready(function () {
 
 });
 
+// Validación de formulario en JQuery
+
+$(document).ready(function () {
+
+  $("#formContacto").on("submit", function (e) {
+    e.preventDefault(); // Evita que se recargue la página
+
+    let nombre = $("#nombre").val().trim();
+    let email = $("#email").val().trim();
+    let emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (nombre === "") {
+      alert("Por favor, ingresa tu nombre");
+      return;
+    }
+
+    if (!emailValido.test(email)) {
+      alert("Por favor, ingresa un email válido");
+      return;
+    }
+
+    alert("Formulario enviado correctamente");
+
+    // Limpia el formulario
+    this.reset();
+  });
+
+  // Validación en tiempo real
+  $("#email").on("change", function () {
+    let email = $(this).val();
+    let emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (emailValido.test(email)) {
+      $(this).css("border", "2px solid green");
+    } else {
+      $(this).css("border", "2px solid red");
+    }
+  });
+
+});
