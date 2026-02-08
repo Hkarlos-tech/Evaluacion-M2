@@ -94,6 +94,20 @@ header {
 header img {
     border: 4px solid var(--bs-primary);
 }
+#icon {
+    border-color: var(--bs-card-bg)
+}
+
+header a {
+    color: var(--bs-navbar-bg);
+    text-decoration: none;
+}
+
+header a:hover {
+    color: var(--bs-secondary);
+    text-decoration: underline;
+}
+
 
 /* Secciones */
 
@@ -117,7 +131,7 @@ section h2 {
 
 /* Habilidades */
 
-#habilidades .col-md-4 {
+#habilidades .col-md-3 {
     background-color: var(--bs-secondary);
     color: var(--bs-body-color);
     padding: 15px;
