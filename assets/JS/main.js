@@ -81,3 +81,25 @@ $(document).ready(function () {
   });
 
 });
+$(document).ready(function () {
+
+    const footerColors = [
+        "#2f7d57", 
+        "#1f5f43", 
+        "#3a8f6b", 
+        "#0f2a1d", 
+        "#48ef9d"  
+    ];
+
+    let currentIndex = 0;
+
+    $("#btnFooterColor").on("click", function () {
+        currentIndex = (currentIndex + 1) % footerColors.length;
+
+        document.documentElement.style.setProperty(
+            "--bs-navbar-bg",
+            footerColors[currentIndex]
+        );
+    });
+
+});
