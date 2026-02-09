@@ -36,8 +36,8 @@ Desarrollar un CV en formato web que:
 ├── js
 │ └── main.js
 ├── img
-│ ├── dins.jpeg
-│ ├── face.png
+│ ├── dins-removebg-preview.png
+│ ├── face-removebg-preview.png
 │ ├── foto.jpeg
 │ └── git.png
 index.html
