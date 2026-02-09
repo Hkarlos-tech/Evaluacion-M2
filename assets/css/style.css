@@ -98,16 +98,22 @@ header img {
     border-color: var(--bs-card-bg)
 }
 
-header a {
+:root[data-bs-theme="light"] header a {
     color: var(--bs-navbar-bg);
     text-decoration: none;
 }
-
-header a:hover {
+:root[data-bs-theme="light"] header a:hover {
     color: var(--bs-secondary);
     text-decoration: underline;
 }
-
+:root[data-bs-theme="dark"] header a {
+    color: var(--bs-link-color);
+    text-decoration: none;
+}
+:root[data-bs-theme="dark"] header a:hover {
+    color: var(--bs-secondary);
+    text-decoration: underline;
+}
 
 /* Secciones */
 
